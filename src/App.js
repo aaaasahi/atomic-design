@@ -1,7 +1,19 @@
 import { PrimaryButton } from "./components/atoms/button/PrimaryButton";
 import { SecondaryButton } from "./components/atoms/button/SecondaryButton";
 import { SearchInput } from "./components/molucules/SearchInput";
+import { UserCard } from "./components/organisms/user/UserCard";
 import "./styles.css";
+
+const user = {
+  name: "あさひ",
+  image: "https://source.unsplash.com/NE0XGVKTmcA",
+  email: "1234@example.com",
+  phone: "000-1111-222",
+  company: {
+    name: "テスト株式会社"
+  },
+  website: "https//google.com"
+};
 
 export default function App() {
   return (
@@ -9,6 +21,7 @@ export default function App() {
       <PrimaryButton>テスト</PrimaryButton>
       <SecondaryButton>検索</SecondaryButton>
       <SearchInput />
+      <UserCard user={user} />
     </div>
   );
 }
